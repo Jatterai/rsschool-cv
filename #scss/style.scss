@@ -1,0 +1,28 @@
+@import "null";
+@import "header";
+
+//--------------- ПЕРЕМЕННЫЕ -------------------------//
+@import "variables";
+
+body {
+	background-color: #1f1f1f;
+	font-family: $fontFamily;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+._container {
+	max-width: $maxWidthContainer px;
+	padding: 0px 15px;
+	margin: o auto;
+}
+
+.page {
+	flex: 1 1 auto;
+}
