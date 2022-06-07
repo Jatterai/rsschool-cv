@@ -1,11 +1,9 @@
-@import "null";
-@import "header";
-
 //--------------- ПЕРЕМЕННЫЕ -------------------------//
 @import "variables";
 
 body {
 	background-color: #1f1f1f;
+	color: $fontColor;
 	font-family: $fontFamily;
 }
 
@@ -18,11 +16,68 @@ body {
 }
 
 ._container {
-	max-width: $maxWidthContainer px;
+	max-width: 1270px;
 	padding: 0px 15px;
-	margin: o auto;
+	margin: 0 auto;
 }
 
 .page {
 	flex: 1 1 auto;
+}
+
+//----- IPMORT PARTS -----//
+@import "null";
+@import "header";
+
+//---------------------- HELLO SECTION -------------------------------//
+.hello {
+	&__container {
+		min-height: 100vh;
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__body {
+		flex: 0 1 49%;
+	}
+
+	&__textbox {
+	}
+
+	&__welcome {
+	}
+
+	&__title {
+	}
+
+	&__developer {
+	}
+
+	&__btn {
+	}
+
+	&__image {
+		padding-right: 60px;
+		align-self: flex-end;
+		margin: 0px 0px 40px 0px;
+
+		flex: 0 0 35%;
+		padding-bottom: 35%;
+		overflow: hidden;
+		border-radius: 50%;
+		position: relative;
+
+		box-shadow: -10px 10px 0px $accentColor;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width: 100%;
+		}
+		@media (max-width: $maxWidthContainer + px) {
+			margin: 0px 0px 10% 0px;
+		}
+	}
+}
+.btn {
 }
