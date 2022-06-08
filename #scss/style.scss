@@ -35,6 +35,14 @@ body {
 		min-height: 100vh;
 		display: flex;
 		align-items: flex-end;
+		overflow: hidden;
+
+		//media on small screens
+		@media (max-width: $md2) {
+			flex-direction: column-reverse;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 
 	&__body {
@@ -42,42 +50,119 @@ body {
 	}
 
 	&__textbox {
+		margin: 0 35px 74px;
+
+		//media on small scriins for all text
+		@media (max-width: $md2) {
+			margin: 0;
+			text-align: center;
+		}
 	}
 
 	&__welcome {
+		font-weight: 300;
+		font-size: (25.4 / 16) + rem; //1.58rem
+		line-height: (38 / 25.4) + em;
+		letter-spacing: 0.36em;
+		text-transform: uppercase;
+
+		//small screens
+		@media (max-width: $md2) {
+			font-size: (18 / 16) + rem;
+			line-height: 1.44;
+			letter-spacing: 0.36em;
+			text-align: center;
+			margin: 0px 0px 0.55em 0px;
+		}
 	}
 
 	&__title {
+		font-weight: 600;
+		font-size: (67.1 / 16) + rem; //4.1937 rem
+		line-height: 1.5; //101px
+
+		//small screens
+		@media (max-width: $md4) {
+			font-size: 1.8rem;
+			line-height: 1.5;
+		}
 	}
 
 	&__developer {
+		font-weight: 300;
+		font-size: 1.25rem;
+		line-height: 1.5;
+		letter-spacing: 0.015em;
+		text-transform: uppercase;
+
+		margin: 0px 0px 2.6em 0px;
+
+		@media (max-width: $md2) {
+			font-size: 0.85rem;
+			line-height: 1.5;
+			letter-spacing: 0.015em;
+			text-transform: uppercase;
+
+			margin: 0px 0px 2.42em 0px;
+		}
 	}
 
 	&__btn {
 	}
 
 	&__image {
-		padding-right: 60px;
-		align-self: flex-end;
-		margin: 0px 0px 40px 0px;
-
-		flex: 0 0 35%;
-		padding-bottom: 35%;
+		flex: 0 0 38%;
+		padding-top: 38%;
 		overflow: hidden;
 		border-radius: 50%;
-		position: relative;
 
+		position: relative;
 		box-shadow: -10px 10px 0px $accentColor;
+		align-self: center;
+		margin: 5% 0px 0px 0px;
+
 		img {
 			position: absolute;
 			top: 0;
 			left: 0;
 			max-width: 100%;
+			object-fit: cover;
 		}
 		@media (max-width: $maxWidthContainer + px) {
-			margin: 0px 0px 10% 0px;
+		}
+
+		//small screen image
+		@media (max-width: $md2) {
+			flex: 0 0 auto;
+			padding: 0 0 70% 0;
+			width: 70%;
+			box-shadow: none;
+			margin: 5% 0px 5% 0px;
+		}
+
+		//768px media. Smaller sizes
+		@media (max-width: $md4) {
+			padding: 0 0 86% 0;
+			width: 86%;
 		}
 	}
 }
 .btn {
+	//font styles
+	font-size: 1.6rem;
+	line-height: 1.5;
+	letter-spacing: 0.05em;
+	text-transform: capitalize;
+
+	//btn
+	padding: 0.644em 1.77em;
+	background: $gradient;
+	border-radius: 10px;
+
+	//small screens
+	@media (max-width: $md2) {
+		font-size: 1.125rem;
+		line-height: 1.44;
+		letter-spacing: 0.05em;
+	}
 }

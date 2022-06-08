@@ -3,13 +3,14 @@ $maxWidth: 1152;
 $maxWidthContainer: 1270;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98px;
-$md3: 767.98px;
+$md3: 768px;
 $md4: 479.98px;
 
 //ЦВЕТА
 $backgroundColor: #1f1f1f;
 $fontColor: #fff;
 $accentColor: rgb(248, 34, 145);
+$gradient: linear-gradient(180deg, rgb(248, 34, 127) 0%, rgb(248, 34, 145) 100%);
 
 //--------------- ИМПОРТ ШРИФТОВ -------------------------//
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,regular,600&display=swap");
