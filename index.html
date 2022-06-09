@@ -116,6 +116,39 @@
 
 			</section>
 
+			<section class="code">
+				<div class="code__container _container">
+					<h2 class="code__title title title-upline">Code Example</h2>
+					<p class="code__text text">
+						<a href="https://www.codewars.com/kata/highest-scoring-word/javascript" target="_blank">(Kata from
+							Codewars) ></a>
+					</p>
+					<code class="code__code">
+						function high(x){<br>
+							&emsp;let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');<br>
+							&emsp;const wordScoreCount = (word) => <br>
+							&emsp;word<br>
+							&emsp;.split('')<br>
+							&emsp;.map((letter) => alphabet.indexOf(letter)+1)<br>
+							&emsp;.reduce((sum, letterScore) => sum + letterScore, 0);<br>
+							<br>
+							&emsp;x = x.toLowerCase().split(' ');<br>
+							&emsp;let xScores = x.map(wordScoreCount);<br>
+							<br>
+							&emsp;return x[xScores.indexOf(Math.max(...xScores))];<br>
+					  }
+					</code>
+				</div>
+			</section>
+
+			<section class="works">
+				<div class="works__container _container">
+					<h2 class="works__title title title-mini title-upline">My works</h2>
+					<p class="text"><i>place for my future awesome projects</i></p>
+				</div>
+
+			</section>
+
 		</main>
 
 		<!-- footer -->
