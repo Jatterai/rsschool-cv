@@ -25,6 +25,74 @@ body {
 	flex: 1 1 auto;
 }
 
+.subtitle {
+	font-weight: 600;
+	font-size: 1.85rem;
+	line-height: 1.5;
+	letter-spacing: 0.05em;
+	text-transform: capitalize;
+	@media (max-width: $md3) {
+		font-size: 1.125rem;
+	}
+}
+
+.title {
+	font-weight: 600;
+	font-size: 3rem;
+	line-height: 1.5;
+	letter-spacing: 0.05em;
+	text-transform: capitalize;
+	@media (max-width: $md3) {
+		font-weight: 600;
+		font-size: 1.9rem;
+		line-height: 1.5;
+		letter-spacing: 0.05em;
+		text-transform: capitalize;
+	}
+}
+
+.title-upline {
+	position: relative;
+	display: inline-block;
+	&::before {
+		content: "";
+		height: 1px;
+		background-color: rgba(255, 255, 255, 0.84);
+		width: 80%;
+		position: absolute;
+		top: 0;
+	}
+}
+
+.title-underline {
+	border-bottom: 1.5px solid #fff;
+}
+.text {
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0.05em;
+	text-transform: capitalize;
+	@media (max-width: $md3) {
+		font-size: 0.875rem;
+	}
+}
+
+section:not(:first-child) {
+	padding: 0 0px 100px 0px;
+	@media (max-width: $md3) {
+		padding: 0 0 55px 0;
+	}
+}
+.title-mini {
+	@media (max-width: $md3) {
+		font-weight: 600;
+		font-size: (22.4229 / 16) + rem;
+		line-height: (34 / 22.42);
+		letter-spacing: 0.05em;
+		text-transform: capitalize;
+	}
+}
+
 //----- IPMORT PARTS -----//
 @import "null";
 @import "header";
@@ -111,8 +179,8 @@ body {
 	}
 
 	&__image {
-		flex: 0 0 38%;
-		padding-top: 38%;
+		flex: 0 0 36%;
+		padding-top: 36%;
 		overflow: hidden;
 		border-radius: 50%;
 
@@ -149,6 +217,7 @@ body {
 }
 .btn {
 	//font styles
+	display: inline-block;
 	font-size: 1.6rem;
 	line-height: 1.5;
 	letter-spacing: 0.05em;
@@ -159,6 +228,21 @@ body {
 	background: $gradient;
 	border-radius: 10px;
 
+	transition: all 300ms ease 0s;
+
+	position: relative;
+	top: 0;
+	left: 0;
+	&:hover {
+		box-shadow: 10px 7px 0px #98fa48, -5px -5px 0px rgba(255, 255, 255, 0.537);
+		transform: scale(1.025);
+	}
+	&:active {
+		transition: all 90ms;
+		box-shadow: 0px 0px 0px #98fa48, 0px 0px 0px rgba(255, 255, 255, 0.537);
+		transform: scale(0.9);
+	}
+
 	//small screens
 	@media (max-width: $md2) {
 		font-size: 1.125rem;
@@ -166,3 +250,158 @@ body {
 		letter-spacing: 0.05em;
 	}
 }
+
+.about {
+	&__container {
+	}
+
+	&__title {
+		display: inline-block;
+		margin: 0px 0px 40px 0px;
+
+		@media (max-width: $md3) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__text {
+		line-height: 2rem;
+		&:not(:last-child) {
+			margin: 0px 0px 1em 0px;
+		}
+	}
+}
+
+//------------------------ LANGUAGE AND STUDIES ------------------------------//
+
+.studies-languages {
+	&__container {
+	}
+
+	&__flex {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 15%;
+	}
+
+	&__item {
+		flex: 1 1 300px;
+	}
+}
+
+.studies-languages {
+	&__item:not(:last-child) {
+		margin: 0px 0px 50px 0px;
+	}
+}
+
+.studies-languages {
+	&__item {
+	}
+}
+.studies {
+	&__box {
+	}
+
+	&__course {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		margin: 0px 0px 25px 0px;
+
+		@media (max-width: $md3) {
+			gap: 12px;
+		}
+		&::last-child {
+			margin: 0;
+		}
+	}
+
+	&__picture {
+		width: 80px;
+		height: 80px;
+		background: $gradient;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 auto;
+		img {
+			width: 33.33%;
+		}
+		@media (max-width: $md3) {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	&__info {
+	}
+
+	&__name {
+		font-weight: 600;
+		font-size: 2rem;
+		line-height: 1.5;
+		letter-spacing: 0.05em;
+		@media (max-width: $md3) {
+			font-size: 1.1rem;
+		}
+	}
+
+	&__dates {
+		font-weight: 300;
+		font-size: 1.125rem;
+		line-height: 1.5;
+		letter-spacing: 0.05em;
+		text-transform: capitalize;
+	}
+}
+.studies-title {
+	margin: 0px 0px 25px 0px;
+}
+
+.languages {
+	&__box {
+	}
+
+	&__language {
+		margin: 0px 0px 25px 0px;
+		@media (max-width: $md3) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	&__subtitle {
+		margin: 0px 0px 15px 0px;
+		@media (max-width: $md3) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+
+	&__bar {
+		background: $horizontalGradient;
+		height: 25px;
+		border-radius: 20px;
+		@media (max-width: $md3) {
+			height: 15px;
+		}
+	}
+}
+
+.english-bar {
+	width: 60%;
+}
+.russian-bar {
+	width: 100%;
+}
+
+.languages-title {
+	margin: 0px 0px 33px 0px;
+	@media (max-width: $md3) {
+		margin: 0px 0px 25px 0px;
+	}
+}
+
+//-------------- IMPORT FOOTER ------------------------/
+@import "footer";
