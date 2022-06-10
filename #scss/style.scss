@@ -1,6 +1,16 @@
 //--------------- ПЕРЕМЕННЫЕ -------------------------//
 @import "variables";
 
+::-webkit-scrollbar {
+	height: 4px;
+	width: 4px;
+	background: $backgroundColor;
+}
+::-webkit-scrollbar-thumb:horizontal {
+	background: rgba(248, 34, 145, 0.603);
+	border-radius: 10px;
+}
+
 body {
 	background-color: #1f1f1f;
 	color: $fontColor;
@@ -250,7 +260,7 @@ section:not(:first-child) {
 		letter-spacing: 0.05em;
 	}
 }
-
+//----------- ABOUT SECTION ---------------//
 .about {
 	&__container {
 	}
@@ -270,6 +280,104 @@ section:not(:first-child) {
 			margin: 0px 0px 1em 0px;
 		}
 	}
+}
+
+//---------------------- SKILLS SECTION---------------------------------------//
+.skills {
+	&__container {
+		padding-bottom: (80 - 1.5rem) + px;
+		@media (max-width: $md3) {
+			padding-bottom: (55 - 1.5rem) + px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 1.5em;
+	}
+
+	&__list {
+		display: flex;
+		gap: 40px;
+		justify-content: space-between;
+		padding: 2rem;
+		scrollbar-arrow-color: $accentColor;
+		@media (max-width: $md2) {
+			overflow: auto;
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__item {
+		border: 2px solid $accentColor;
+		display: flex;
+		flex: 0 0 auto;
+		align-items: center;
+		justify-content: center;
+		background: $gradient;
+		height: 130px;
+		width: 130px;
+		border-radius: 50%;
+		padding: 1em;
+		span {
+			font-weight: 600;
+			font-size: 1.2rem;
+			overflow-wrap: break-word;
+			text-shadow: 1.5px 1.5px 0px rgb(91, 45, 87);
+		}
+		@media (max-width: $md3) {
+			width: 100px;
+			height: 100px;
+			span {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+.css {
+	background: linear-gradient(
+		0deg,
+		rgb(248, 34, 102) 0%,
+		rgb(248, 34, 145) 55%,
+		$backgroundColor 55%,
+		$backgroundColor 100%
+	);
+}
+.js {
+	background: linear-gradient(
+		0deg,
+		rgb(248, 34, 102) 0%,
+		rgb(248, 34, 145) 10%,
+		$backgroundColor 10%,
+		$backgroundColor 100%
+	);
+}
+.html {
+	background: linear-gradient(
+		0deg,
+		rgb(248, 34, 102) 0%,
+		rgb(248, 34, 145) 80%,
+		$backgroundColor 80%,
+		$backgroundColor 100%
+	);
+}
+.scss {
+	background: linear-gradient(
+		0deg,
+		rgb(248, 34, 102) 0%,
+		rgb(248, 34, 145) 20%,
+		$backgroundColor 20%,
+		$backgroundColor 100%
+	);
+}
+.Photoshop {
+	background: linear-gradient(
+		0deg,
+		rgb(248, 34, 102) 0%,
+		rgb(248, 34, 145) 85%,
+		$backgroundColor 85%,
+		$backgroundColor 100%
+	);
 }
 
 //------------------------ LANGUAGE AND STUDIES ------------------------------//
@@ -417,6 +525,23 @@ section:not(:first-child) {
 		a {
 			transition: all 200ms ease 0s;
 			&:hover {
+				color: $accentColor;
+			}
+
+			span {
+				display: inline-block;
+				font-size: 140%;
+				line-height: 0;
+				position: relative;
+				top: 0.13em;
+				left: 0;
+				transition: left 200ms ease 0s;
+			}
+
+			&:hover span {
+				left: 5px;
+			}
+			&:active {
 				color: $accentColor;
 			}
 		}
