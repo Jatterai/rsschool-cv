@@ -829,13 +829,13 @@ h6 {
   margin: 0px 0px 1em 0px;
 }
 
-footer {
+#footer {
   background-color: #272727;
   height: 15vh;
   overflow: hidden;
 }
 
-footer .footer__container {
+#footer .footer__container {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -848,7 +848,7 @@ footer .footer__container {
 }
 
 @media (max-width: 991.98px) {
-  footer .footer__container {
+  #footer .footer__container {
     padding: 0 20px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -856,23 +856,23 @@ footer .footer__container {
   }
 }
 
-footer .footer_rs {
+#footer .footer_rs {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
 
-footer .footer_rs img {
+#footer .footer_rs img {
   height: 25px;
 }
 
 @media (max-width: px) {
-  footer .footer_rs img {
+  #footer .footer_rs img {
     height: 13px;
   }
 }
 
-footer .footer__social {
+#footer .footer__social {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
@@ -881,11 +881,11 @@ footer .footer__social {
   display: flex;
 }
 
-footer .footer__social li:not(:last-child) {
+#footer .footer__social li:not(:last-child) {
   margin: 0px 2rem 0px 0px;
 }
 
-footer .footer__year {
+#footer .footer__year {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -893,7 +893,7 @@ footer .footer__year {
 }
 
 @media (max-width: 991.98px) {
-  footer .footer__year {
+  #footer .footer__year {
     display: none;
   }
 }
