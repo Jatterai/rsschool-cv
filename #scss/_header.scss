@@ -1,0 +1,66 @@
+//--------------- ПЕРЕМЕННЫЕ -------------------------//
+@import "variables";
+
+.header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		height: 130px;
+		align-items: center;
+		@media (max-width: $md3) {
+			height: 70px;
+		}
+	}
+
+	&__name {
+		@media (max-width: $md3) {
+			display: none;
+		}
+	}
+
+	&__nav {
+		width: 100%;
+	}
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-end;
+	&__list {
+		display: flex;
+		@media (max-width: $md3) {
+			width: 100%;
+			justify-content: space-between;
+		}
+	}
+
+	&__link {
+		font-size: 20 / 16 + rem;
+		line-height: 1.5;
+		color: $fontColor;
+		margin: 0px 3.25em 0px 0px;
+		&:last-child {
+			margin: 0px 1.25em 0px 0px;
+		}
+		a {
+			transition: all 200ms ease 0s;
+			&:hover {
+				color: $accentColor;
+			}
+		}
+		@media (max-width: $md3) {
+			margin: 0;
+		}
+		@media (max-width: $minWidth) {
+			font-size: 1rem;
+		}
+	}
+	@media (max-width: $md3) {
+		justify-content: stretch;
+	}
+}
