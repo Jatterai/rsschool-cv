@@ -1,3 +1,3 @@
-https://jatterai.github.io/rsschool-cv/cv
+# My CV
 
-https://jatterai.github.io/rsschool-cv/
+Deploy: https://jatterai.github.io/rsschool-cv/
