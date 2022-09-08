@@ -1,0 +1,75 @@
+@import "variables";
+
+#footer {
+	background-color: #272727;
+	height: 15vh;
+	overflow: hidden;
+
+	.footer__container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		@media (max-width: $md2) {
+			padding: 0 20px;
+			justify-content: space-between;
+		}
+	}
+	.footer_rs {
+		order: 1;
+		img {
+			height: 25px;
+			@media (max-width: px) {
+				height: 13px;
+			}
+		}
+	}
+
+	.footer__social {
+		order: 3;
+		display: flex;
+		li:not(:last-child) {
+			margin: 0px 2rem 0px 0px;
+		}
+	}
+
+	.footer__year {
+		order: 2;
+		color: #aaaaaa;
+		@media (max-width: $md2) {
+			display: none;
+		}
+	}
+}
+
+.social-icon {
+	color: #ffffff;
+	opacity: 0.8;
+	display: inline-block;
+	font-size: 2rem;
+	transition: all 200ms ease 0s;
+	&:last-child {
+		margin: 0;
+	}
+
+	&:hover {
+		color: $accentColor;
+	}
+
+	@media (max-width: $md2) {
+		font-size: 1.7rem;
+		margin: 0px 1rem 0px 0px;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+
+._icon-github {
+}
+
+._icon-twitter {
+}
+
+._icon-telegram {
+}
